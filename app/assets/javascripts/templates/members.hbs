@@ -1,0 +1,19 @@
+<div class="span3">
+  <table class='table table-striped'>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+    {{#each controller}}
+      <tr>
+        <td>{{id}}</td>
+        <td>{{#linkTo "members.show" this}}{{fullName}}{{/linkTo}}</td>
+      </tr>
+    {{/each}}
+  </table>
+  {{#linkTo 'members.new' class='btn btn-primary'}}Create{{/linkTo}}
+</div>
+
+<div class="span8">
+  {{outlet}}
+</div>
